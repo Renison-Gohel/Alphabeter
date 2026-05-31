@@ -1,0 +1,63 @@
+[project]
+name = "alphabeter"
+version = "2.3.4"
+authors = [
+    {name = "RC", email = "RC.dev@pm.me"},
+]
+description = "An offensive Google framework."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "AGPL-3.0"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["dependencies"]
+keywords=["osint", "pentest", "cybersecurity", "investigation", "hideandsec", "shadows"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.poetry.scripts]
+alphabeter = "alphabeter.alphabeter:main"
+
+[tool.setuptools.packages.find]
+include = ["alphabeter", "alphabeter.*"]
+
+[project.urls]
+"Homepage" = "https://github.com/RC/Alphabeter"
+"Bug Reports" = "https://github.com/RC/Alphabeter/issues"
+"Funding" = "https://github.com/sponsors/RC"
+"Source" = "https://github.com/RC/Alphabeter"
+
+[tool.poetry]
+name = "alphabeter"
+version = "2.3.4"
+description = "An offensive Google framework."
+authors = ["RC <RC.dev@pm.me>"]
+license = "AGPL-3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+geopy = "^2.4.1"
+httpx = {extras = ["http2"], version = "^0.27.2"}
+imagehash = "^4.3.1"
+pillow = "^12.1.0"
+python-dateutil = "^2.9.0.post0"
+rich = "^13.9.1"
+beautifultable = "^1.1.0"
+beautifulsoup4 = "^4.12.3"
+alive-progress = "^3.1.5"
+protobuf = "^5.28.2"
+autoslot = "^2022.12.1"
+humanize = "^4.10.0"
+inflection = "^0.5.1"
+jsonpickle = "^3.3.0"
+packaging = "^24.1"
+rich-argparse = "^1.5.2"
+dnspython = "^2.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

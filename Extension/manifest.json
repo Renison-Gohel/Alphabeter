@@ -1,0 +1,41 @@
+{
+
+    "manifest_version": 2,
+    "name": "Alphabeter Companion",
+    "version": "2.0.0",
+  
+    "description": "Load all needed cookies to use Alphabeter peacefully.",
+  
+    "icons": {
+      "48": "assets/alphabeter_square.png"
+    },
+    "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "*://*.google.com/*",
+      "storage",
+      "cookies"
+    ],
+  
+    "content_scripts": [
+      {
+        "js": ["lib/browser-polyfill.min.js"],
+        "matches": ["*://*.google.com/*"]
+      }
+    ],
+
+    "background": {
+      "page": "background/background.html"
+    },
+
+    "web_accessible_resources": [
+      "popup/interface.html"
+    ],
+
+    "browser_action": {
+      "default_icon": "assets/alphabeter_square.png",
+      "default_title": "Alphabeter Companion",
+      "default_popup": "popup/interface.html"
+    }
+  
+  }
